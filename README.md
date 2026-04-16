@@ -21,13 +21,7 @@ A partner exercise to practice using JUnit tests.
     ```
 
 ## Understanding the program
-1. Compile the program
-    ```
-    javac -cp src src/App.java src/PasswordChecker.java
-    ```
-1. Run the program
-    ```
-    java -cp src App
+1. Open App.java and run it using the "Run" button in VS Code.
 1. Follow the prompts in the program. Experiment with it and understand what it does.
 1. Take a brief glance at the `App.java` file to get an overall idea of what it does. Do not dwell too much on fully understanding this file.
     > It is often the case that you will need only to understand part of a program to begin working on it. Learning how to prioritize what parts of a project to deeply understand and which parts to have only a loose understanding of is an important skill to learn!
