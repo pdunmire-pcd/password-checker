@@ -11,4 +11,10 @@ public class PasswordCheckerTest {
     assertEquals(0, 0);
   }
 
+  //describePasswordLength tests
+
+  //isAlphanumeric
+
+  //isBannedPassword
+
 }
