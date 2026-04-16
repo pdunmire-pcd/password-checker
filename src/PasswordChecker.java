@@ -86,7 +86,7 @@ public class PasswordChecker {
     /**
      * Provides a default set of commonly used weak passwords.
      *
-     * @return A set of default banned passwords
+     * @return A set of default banned passwordsh
      */
     private Set<String> getDefaultBannedPasswords() {
         return new HashSet<>(Arrays.asList(
