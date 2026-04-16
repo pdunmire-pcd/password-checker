@@ -26,6 +26,7 @@ public class PasswordCheckerTest {
     String actual = counter.describePasswordLength("waytoolongpassword");
     //Assert
     assertEquals("long", actual);
+  }
 
   @Test
   public void verifyPasswordMediumTest() {
@@ -38,8 +39,7 @@ public class PasswordCheckerTest {
 
   }
 
-  //isAlphanumeric
-
+  
   //isAlphanumeric
     @Test
   public void verifyNonAlphanumericIsFlase() {
@@ -50,6 +50,17 @@ public class PasswordCheckerTest {
     assertFalse(passwordUtils.isAlphanumeric(testPassword));
 
   }
+
+  @Test 
+  public void verifyAlphanumericIsTrue(){
+    //Arrange
+    PasswordChecker counter = new PasswordChecker(6, 12);
+    //Act
+    boolean actual = counter.isAlphanumeric("teamworkdrm");
+    //Assert
+    assertTrue(actual);
+  }
+
   
 
   //isBannedPassword
@@ -60,7 +71,7 @@ public class PasswordCheckerTest {
     //Act
     boolean actual = counter.isBannedPassword("123456");
     //Assert
-    assertEquals(true, actual);
+     assertTrue(actual);
   }
 
     @Test
