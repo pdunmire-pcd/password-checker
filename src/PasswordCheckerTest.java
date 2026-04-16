@@ -11,6 +11,31 @@ public class PasswordCheckerTest {
     assertEquals(0, 0);
   }
 
+  //describePasswordLength tests
+  @Test
+  public void verifyTooShort() {
+  PasswordChecker passwordUtils = new PasswordChecker(6, 12);
+  
+  String testPassword = "q";
+  testPassword = passwordUtils.describePasswordLength(testPassword);
+
+    assertEquals("short", testPassword);
+  }
+
+  @Test 
+  public void verifyTooLong(){
+    //Arrange
+    //this is a bug , we need to add longThreshold
+    PasswordChecker counter = new PasswordChecker(12, 20);
+    //Act
+    String actual = counter.describePasswordLength("waytoolongpassword");
+    //Assert
+    assertEquals("long", actual);
+  }
+
+  //isAlphanumeric
+
+  //isBannedPassword
 
 
 }
