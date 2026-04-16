@@ -4,13 +4,6 @@ import org.junit.jupiter.api.Test;
 
 public class PasswordCheckerTest {
 
-  @Test
-  public void testDummy() {
-    // This test is used only to validate that your VS Code setup is working
-    // Delete this test after you have written your other tests
-    assertEquals(0, 0);
-  }
-
   //describePasswordLength tests
   @Test
   public void verifyTooShort() {
@@ -31,6 +24,16 @@ public class PasswordCheckerTest {
     String actual = counter.describePasswordLength("waytoolongpassword");
     //Assert
     assertEquals("long", actual);
+
+  @Test
+  public void verifyPasswordMediumTest() {
+    PasswordChecker passwordUtils = new PasswordChecker(6, 12);
+
+    String testPassword = "teamworkdrm";
+    testPassword = passwordUtils.describePasswordLength(testPassword);
+
+    assertEquals("medium", testPassword);
+
   }
 
   //isAlphanumeric
