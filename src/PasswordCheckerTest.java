@@ -94,6 +94,14 @@ public class PasswordCheckerTest {
       assertFalse(passwordUtils.isAlphanumeric(testPassword));
 }
 
-
+  @Test
+  public void verifyNonBannedPasswordIsFalse() {
+    //Arrange
+    PasswordChecker passwordUtils = new PasswordChecker(6, 12);
+    //Act
+    String testPassword = "correctHorseBattery";
+    //Assert
+    assertFalse(passwordUtils.isBannedPassword(testPassword));
+}
 
 }
