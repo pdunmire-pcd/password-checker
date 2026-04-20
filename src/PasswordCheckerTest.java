@@ -64,7 +64,7 @@ public class PasswordCheckerTest {
   
 
   //isBannedPassword
-    @Test 
+  @Test 
   public void verifyIfBannedPasswordTest(){
     //Arrange 
     PasswordChecker counter = new PasswordChecker(6, 12);
@@ -74,7 +74,7 @@ public class PasswordCheckerTest {
      assertTrue(actual);
   }
 
-    @Test
+  @Test
   public void verifyIsBannedWorksCaseSensitive() {
     PasswordChecker passwordUtils = new PasswordChecker(6, 12);
 
@@ -83,6 +83,16 @@ public class PasswordCheckerTest {
     assertTrue(passwordUtils.isBannedPassword(testPassword));
 
   }
+
+  @Test
+  public void verifyNonAlphanumericAtEndIsFalse() {
+      //Arrange
+      PasswordChecker passwordUtils = new PasswordChecker(6, 12);
+      //Act
+      String testPassword = "teamwork!";
+      //Assert
+      assertFalse(passwordUtils.isAlphanumeric(testPassword));
+}
 
 
 
